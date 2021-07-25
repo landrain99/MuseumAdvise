@@ -31,7 +31,7 @@ namespace BackendApi.Controllers
         [HttpGet("GetAll")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<IEnumerable<ReviewModel>>> GetUsers()
+        public async Task<ActionResult<IEnumerable<ReviewModel>>> GetReview()
         {
             return await _context.Review.ToListAsync();
         }
@@ -64,6 +64,7 @@ namespace BackendApi.Controllers
             return await _context.Review.ToListAsync();
         }
 
+       
 
-    }
+    } 
 }

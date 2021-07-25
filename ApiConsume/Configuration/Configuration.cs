@@ -11,9 +11,11 @@ namespace ApiConsume.Configuration
 {
     public static class Configuration
     {
-        public static void UserServices(this IServiceCollection services)
+        public static void UseServices(this IServiceCollection services)
         {
             services.AddHttpClient<IUserService, UserService>();
+            services.AddHttpClient<IReviewService, ReviewService>();
+            services.AddScoped<IReviewService, ReviewService>();
         }
     }
 }

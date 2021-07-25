@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace WebSite.Models
 {
-    public class UserModel
+    public class UserModelWebSite
     {
         public int Id { get; set; }
         public string Name { get; set; }

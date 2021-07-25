@@ -15,14 +15,14 @@ namespace WebSite.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        public IUserService _userService;
-
+        public IReviewService _reviewService;
+        //public IUserService _userService;
         
 
-        public HomeController(ILogger<HomeController> logger, IUserService userService)
+        public HomeController(ILogger<HomeController> logger, IReviewService reviewService)
         {
             _logger = logger;
-            _userService = userService;
+            _reviewService = reviewService;
         }
 
         public async Task<IActionResult> Index()
@@ -53,10 +53,12 @@ namespace WebSite.Controllers
         }
 
        
-        public async Task<IActionResult> GetAllUser()
+        public async Task<IActionResult> GetAllReview()
         {
-            var lst = await _userService.GetAllAsync();
+            var lst = await _reviewService.GetAllAsync();
             return View(lst);
         }
+       
+        
     }
 }

@@ -15,6 +15,9 @@ namespace WebSite.Context
         {
         }
 
-        public DbSet<UserModel> UserItem { get; set; }
+        public DbSet<UserModelWebSite> UserItem { get; set; }
+        public DbSet<ReviewModelWebSite> Review { get; set; }
+
+        //public DbSet<MuseumModel> Museum { get; set; }
     }
 }

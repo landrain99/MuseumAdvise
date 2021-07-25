@@ -99,7 +99,7 @@ namespace WebSite
             });
             services.ConfigureSameSiteNoneCoockies();
             services.AddControllersWithViews();
-            ApiConsume.Configuration.Configuration.UserServices(services);
+            ApiConsume.Configuration.Configuration.UseServices(services);
 
         }
 
