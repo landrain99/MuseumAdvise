@@ -23,18 +23,20 @@ namespace BackendApi.Controllers
         {
             _context = context;
         }
-
+        
         /// <summary>
         /// Get all Users
         /// </summary>
         /// <returns></returns>
-        [HttpGet("GetAll")]
+        [HttpGet("GetAllAsync")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<IEnumerable<ReviewModel>>> GetReview()
         {
             return await _context.Review.ToListAsync();
         }
+        
+        
 
         /// <summary>
         /// Get all Users

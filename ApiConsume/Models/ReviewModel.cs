@@ -19,6 +19,7 @@ namespace ApiConsume.Models
         /// <summary>
         /// Creation date of the review
         /// </summary>
+        [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}")]
         public DateTime Date { get; set; } 
         public int Price { get; set; }
     }

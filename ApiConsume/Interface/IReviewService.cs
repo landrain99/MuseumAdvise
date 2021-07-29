@@ -9,7 +9,7 @@ namespace ApiConsume.Interface
 {
     public interface IReviewService
     {
-        public Task<List<ReviewModel>> GetAllAsync();
+        Task<List<ReviewModel>> GetAllAsync();
        
     }
 }

@@ -15,7 +15,8 @@ namespace ApiConsume.Configuration
         {
             services.AddHttpClient<IUserService, UserService>();
             services.AddHttpClient<IReviewService, ReviewService>();
-            services.AddScoped<IReviewService, ReviewService>();
+            services.AddHttpClient<IMuseumService, MuseumService>();
+
         }
     }
 }
